@@ -1,9 +1,20 @@
 html,
 body {
+  height: 100vh;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  background-color: #49578e;
+  background-image: linear-gradient(
+    135deg,
+    #49578e 15%,
+    #8db2e6 30%,
+    #637ab0 40%,
+    #55669c 60%,
+    #49578e 100%
+  );
 }
 
 a {
