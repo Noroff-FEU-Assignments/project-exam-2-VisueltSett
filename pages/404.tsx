@@ -1,15 +1,26 @@
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const NotFound = () => {
+  useEffect(() => {
+    console.log('use effect ran successfully');
+  }, []);
+
   return (
     <div className="not-found">
-      <h1>Huff da...</h1>
-      <h2>Vi beklager, men vi kan dessverre ikke finne siden du ser etter.</h2>
+      <h1>Beklager!</h1>
+      <h2>Vi kan dessverre ikke finne siden du ser etter.</h2>
       <p>
-        Følg denne linken for å gå tilbake til startsiden:{' '}
+        Gå tilbake til{' '}
         <Link href="/">
-          <a>Hjem</a>
+          <a>startsiden</a>
         </Link>
+        , eller{' '}
+        <Link href="/kontakt-oss">
+          <a>kontakt oss</a>
+        </Link>
+        , og vi vil gjøre vårt beste for å hjelpe deg.
       </p>
     </div>
   );
