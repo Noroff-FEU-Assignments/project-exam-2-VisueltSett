@@ -1,16 +1,12 @@
 import type { NextPage } from 'next';
-import Head from '.././project/layout/components/Head';
-import LoginForm from '../modules/catalog/components/login-form';
+import Head from '../project/components/Head';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Head />
-      <main className="vh-100 d-flex justify-content-center align-items-center">
-        <LoginForm />
-      </main>
-    </div>
+    <>
+      <Head title="Osebro Antikvariat - Antikvariske og brukte bøker på nett og i butikk" />
+      <div>Osebro Antikvariat</div>
+    </>
   );
 };
-
 export default Home;

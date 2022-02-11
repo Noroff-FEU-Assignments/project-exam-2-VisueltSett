@@ -1,7 +1,8 @@
 import NextHead from 'next/head';
-import PropTypes from 'prop-types';
 
-export default function Head({ title = '' }) {
+type HeadProps = { title: string };
+
+export default function Head({ title = '' }: HeadProps) {
   return (
     <NextHead>
       <title>
@@ -34,6 +35,3 @@ export default function Head({ title = '' }) {
     </NextHead>
   );
 }
-Head.propTypes = {
-  title: PropTypes.string,
-};

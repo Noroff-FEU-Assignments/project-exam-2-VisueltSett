@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import { NavLink } from './NavLink';
 import { useState } from 'react';
 
-type NavProps = {
+export type NavProps = {
   children: React.ReactNode;
 };
 

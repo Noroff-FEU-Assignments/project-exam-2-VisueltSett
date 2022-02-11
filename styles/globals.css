@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merienda&display=swap');
 
+/*
 $osebro-antikvariat-black: rgba(28, 34, 38, 1);
 $osebro-antikvariat-white: rgba(242, 242, 242, 1);
 $osebro-antikvariat-green: rgba(130, 255, 151, 1);
 $osebro-antikvariat-lightblue: rgba(171, 237, 253, 1);
 $osebro-antikvariat-blue: rgba(42, 51, 112, 1);
+*/
 
 * {
   box-sizing: border-box;
@@ -12,7 +14,6 @@ $osebro-antikvariat-blue: rgba(42, 51, 112, 1);
 
 html,
 body {
-  height: 100vh;
   padding: 0;
   margin: 0;
   font-family: 'Inter', sans-serif;
