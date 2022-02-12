@@ -2,11 +2,21 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   display: flex;
-  background: #00022e;
-  height: 50px;
+  background-color: #2a3370;
+  background-image: linear-gradient(
+    135deg,
+    #2a3370 8%,
+    #55669c 18%,
+    #637ab0 18.25%,
+    #abedfd 18.5%,
+    #637ab0 18.75%,
+    #55669c 20%,
+    #2a3370 96.5%
+  );
+  height: 120px;
   align-items: center;
   justify-content: center;
-  color: #fc86aa;
+  color: #f2f2f2;
 `;
 
 export const TitleContainer = styled.div`

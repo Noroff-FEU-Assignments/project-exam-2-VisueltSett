@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head title="Osebro Antikvariat - Antikvariske og brukte bøker på nett og i butikk" />
-      <div>Osebro Antikvariat</div>
+      <div>Osebro Antikvariat- index side content here</div>
     </>
   );
 };
