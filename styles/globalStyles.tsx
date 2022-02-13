@@ -11,7 +11,9 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
 
-
+ #root{
+        margin:0 auto;
+    }
 /*
 $osebro-antikvariat-black: rgba(28, 34, 38, 1);
 $osebro-antikvariat-white: rgba(242, 242, 242, 1);
@@ -24,17 +26,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-image: ${(props) => props.theme.body.backgroundImage};
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1 {
-  font-family: 'Merienda', cursive;
 }
 
 

@@ -1,6 +1,6 @@
 import { Container, Content, PageContainer } from './styles';
-import Header from '../Header';
-import Sidebar from '../Sidebar/index';
+import Header from '../../adminDashboard/DashboardHeader';
+import Sidebar from '../../adminDashboard/Sidebar/index';
 import Footer from '../Footer/index';
 import { useState } from 'react';
 

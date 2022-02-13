@@ -1,6 +1,6 @@
 import { HeaderContainer, TitleContainer, IconContainer } from './styles';
 
-import { Menu, ChevronLeft } from '@styled-icons/material';
+import { Menu, ChevronLeft } from '@styled-icons/material-outlined';
 
 type HeaderProps = {
   isOpened: boolean;

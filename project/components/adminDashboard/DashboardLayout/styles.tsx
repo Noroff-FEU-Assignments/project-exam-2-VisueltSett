@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.main`
+  ${({ theme }) => theme.typography};
+  min-height: 100vh;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.primary.primary1};
+  color: ${({ theme }) => theme.colors.secondary.secondary2};
   text-align: center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 `;
 
 export const Content = styled.div`
