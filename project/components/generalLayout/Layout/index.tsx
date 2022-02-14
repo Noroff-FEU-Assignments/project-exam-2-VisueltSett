@@ -1,5 +1,5 @@
 import { Container, Content, PageContainer } from './styles';
-import Header from '../../adminDashboard/DashboardHeader';
+import Navbar from '../Navbar';
 import Sidebar from '../../adminDashboard/Sidebar/index';
 import Footer from '../Footer/index';
 import { useState } from 'react';
@@ -17,7 +17,7 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <Container>
-      <Header isOpened={isOpened} toggleDrawer={toggleDrawer} />
+      <Navbar />
       <Content>
         <Sidebar isOpened={isOpened} />
         <PageContainer>{children}</PageContainer>

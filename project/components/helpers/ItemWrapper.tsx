@@ -8,6 +8,6 @@ interface Props {
   maxWidth?: string;
   margin?: string;
 }
-export const PageItemWrapper: React.FC<Props> = ({ className, children }) => {
+export const ItemWrapper: React.FC<Props> = ({ className, children }) => {
   return <div className={className}>{children}</div>;
 };

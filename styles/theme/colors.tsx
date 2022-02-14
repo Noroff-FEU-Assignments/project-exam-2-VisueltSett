@@ -1,6 +1,7 @@
 const colors = {
   primary: {
     primaryColor: 'rgba(242, 242, 242, 1)',
+    primaryColorTextShadow: '2px 2px 2px rgba(42, 51, 112, 1)',
     headerBodyTextColor: 'rgb(42, 51, 112)',
     linkColor: 'rgba(42, 51,112,1)',
     activeLinkColor: 'rgba(130, 255, 151, 1)',
@@ -11,6 +12,8 @@ const colors = {
   },
   secondary: {
     secondaryColor: 'rgba(28, 34, 38,1)',
+    secondaryColorTextShadow: '1px 1px 1px rgba(42, 51, 112, .45)',
+    secondaryActiveIconColor: 'rgba(42, 51, 112, 1)',
   },
 };
 
