@@ -1,5 +1,6 @@
 import { HeaderContainer } from '../../helpers/HeaderContainer';
-import { NavWrapper } from './styles';
+import { NavbarContainer, NavStyle, NavWrapper, LogoStyles } from './styles';
+import { IconContainer } from '../../helpers/IconContainer';
 import {
   ShoppingBasket,
   LocalShipping,
@@ -7,46 +8,85 @@ import {
   ContactSupport,
 } from '@styled-icons/material-outlined';
 import Image from 'next/image';
-import OsebroLogo from '../../../../public/images/osebro-antikvariat-logo-black.svg';
+import OsebroLogo from '../../../../public/images/osebro-antikvariat-logo-black-shadow-white.svg';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   return (
     <>
       <HeaderContainer>
         <NavWrapper>
-          <Image
-            src={OsebroLogo}
-            alt="osebro header logo black"
-            width="300"
-            height="180"
-          />
+          <LogoStyles>
+            <Image
+              src={OsebroLogo}
+              alt="osebro header logo black"
+              width="240"
+              height="114"
+            />
+          </LogoStyles>
         </NavWrapper>
-        <NavWrapper flexDirection="row" alignItems="center">
-          <NavWrapper alignItems="center">
-            <LocalShipping />
-            <h3>Levering</h3>
-          </NavWrapper>
-        </NavWrapper>
-        <NavWrapper flexDirection="row" alignItems="center">
-          <NavWrapper alignItems="center">
-            <ContactSupport />
-            <h3>Kontakt</h3>
-          </NavWrapper>
-        </NavWrapper>
-        <NavWrapper flexDirection="row" alignItems="center">
-          <NavWrapper alignItems="center">
-            <PersonOutline />
-            <h3>Logg inn</h3>
-          </NavWrapper>
-        </NavWrapper>
+        <NavbarContainer>
+          <NavStyle>
+            <Link href="/levering">
+              <a>
+                <NavWrapper flexDirection="row" alignItems="flex-start">
+                  <NavWrapper alignItems="baseline">
+                    <IconContainer>
+                      <LocalShipping />
+                    </IconContainer>
 
-        <NavWrapper flexDirection="row" alignItems="center">
-          <NavWrapper alignItems="center">
-            <p color="rgba(130, 255, 151, 1)">0</p>
-            <ShoppingBasket />
-          </NavWrapper>
-          <p color="rgba(242, 242,242,1)">Handlekurv</p>
-        </NavWrapper>
+                    <h5>Levering</h5>
+                  </NavWrapper>
+                </NavWrapper>
+              </a>
+            </Link>
+          </NavStyle>
+          <NavStyle>
+            <Link href="/kontakt-oss">
+              <a>
+                <NavWrapper flexDirection="row" alignItems="flex-start">
+                  <NavWrapper alignItems="baseline">
+                    <IconContainer>
+                      <ContactSupport />
+                    </IconContainer>
+
+                    <h5>Kontakt</h5>
+                  </NavWrapper>
+                </NavWrapper>
+              </a>
+            </Link>
+          </NavStyle>
+          <NavStyle>
+            <Link href="/kunde-login">
+              <a>
+                <NavWrapper flexDirection="row" alignItems="flex-start">
+                  <NavWrapper alignItems="baseline">
+                    <IconContainer>
+                      <PersonOutline />
+                    </IconContainer>
+
+                    <h5>Logg inn</h5>
+                  </NavWrapper>
+                </NavWrapper>
+              </a>
+            </Link>
+          </NavStyle>
+          <NavStyle>
+            <Link href="/handlekurv">
+              <a>
+                <NavWrapper flexDirection="row" alignItems="flex-start">
+                  <NavWrapper alignItems="baseline">
+                    <IconContainer>
+                      <ShoppingBasket />
+                    </IconContainer>
+
+                    <h5>Handlekurv</h5>
+                  </NavWrapper>
+                </NavWrapper>
+              </a>
+            </Link>
+          </NavStyle>
+        </NavbarContainer>
       </HeaderContainer>
     </>
   );

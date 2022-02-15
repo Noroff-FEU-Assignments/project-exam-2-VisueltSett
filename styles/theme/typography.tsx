@@ -1,14 +1,21 @@
 import { css } from 'styled-components';
-import font from './font';
+import text from './text';
 import colors from './colors';
 
-const { style, size, weight } = font;
+const { font, size, weight } = text;
 const { primary, secondary } = colors;
 
 const typography = css`
-  font-family: ${style.body};
+  font-family: ${font.body};
   font-weight: ${weight.regular};
   font-size: ${size.body.mobile.regular}px;
+
+  p,
+  input {
+    font-family: ${font.body};
+    font-weight: ${weight.regular};
+    font-size: ${size.body.mobile.regular}px;
+  }
 
   a {
     font-weight: ${weight.medium};
@@ -25,7 +32,7 @@ const typography = css`
   }
 
   h1 {
-    font-family: ${style.heading};
+    font-family: ${text.font.heading.h1};
     font-size: ${size.heading.mobile.h1}px;
     color: ${secondary.secondaryColor};
     text-shadow: ${secondary.secondaryColorTextShadow};

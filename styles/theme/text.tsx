@@ -1,14 +1,14 @@
-const font = {
-  style: {
+const text = {
+  font: {
     heading: {
-      h1: '"Merienda", cursive, serif',
-      h2: '"Inter", Helvetica, Arial, sans-serif',
-      h3: '"Inter", Helvetica, Arial, sans-serif',
-      h4: '"Inter", Helvetica, Arial, sans-serif',
-      h5: '"Inter", Helvetica, Arial, sans-serif',
-      h6: '"Inter", Helvetica, Arial, sans-serif',
+      h1: '"Merienda", cursive',
+      h2: '"Inter", sans-serif',
+      h3: '"Inter", sans-serif',
+      h4: '"Inter", sans-serif',
+      h5: '"Inter", sans-serif',
+      h6: '"Inter", sans-serif',
     },
-    body: '"Inter", Helvetica, Arial, sans-serif',
+    body: '"Inter", sans-serif',
   },
   size: {
     heading: {
@@ -46,4 +46,4 @@ const font = {
     bold: 700,
   },
 };
-export default font;
+export default text;

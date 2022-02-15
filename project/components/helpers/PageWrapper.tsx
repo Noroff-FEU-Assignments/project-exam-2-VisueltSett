@@ -1,10 +1,15 @@
 import styled from 'styled-components';
-export const PageWrapper = styled.div`
+export const PageWrapper = styled.main`
+  ${({ theme }) => theme.typography};
   display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.primary.primary1};
-  color: ${({ theme }) => theme.colors.secondary.secondary2};
+  background-color: ${({ theme }) => theme.colors.primary.primaryColor};
+  color: ${({ theme }) => theme.colors.secondary.secondaryCOlor};
+  margin: 0;
+  padding: 0;
 `;

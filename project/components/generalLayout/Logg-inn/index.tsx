@@ -1,5 +1,5 @@
 import { Formik, Field, Form, FormikHelpers } from 'formik';
-import { Container, LoggInnBox } from './styles';
+import { LoggInnBox } from './styles';
 
 interface Values {
   username: string;
@@ -8,51 +8,49 @@ interface Values {
 
 export default function LoginForm() {
   return (
-    <Container>
-      <LoggInnBox>
-        <h1 className="display-6 mb-3">Login</h1>
-        <Formik
-          initialValues={{
-            username: '',
-            password: '',
-          }}
-          onSubmit={(
-            values: Values,
-            { setSubmitting }: FormikHelpers<Values>
-          ) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 500);
-          }}
-        >
-          <Form>
-            <div className="mb-3">
-              <Field
-                className="form-control"
-                id="username"
-                name="username"
-                placeholder="Username"
-                aria-describedby="usernameHelp"
-              />
-            </div>
+    <LoggInnBox>
+      <h1>Admin - Login</h1>
+      <Formik
+        initialValues={{
+          username: '',
+          password: '',
+        }}
+        onSubmit={(
+          values: Values,
+          { setSubmitting }: FormikHelpers<Values>
+        ) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 500);
+        }}
+      >
+        <Form>
+          <div className="mb-3">
+            <Field
+              className="form-control"
+              id="username"
+              name="username"
+              placeholder="Username"
+              aria-describedby="usernameHelp"
+            />
+          </div>
 
-            <div className="mb-3">
-              <Field
-                className="form-control"
-                id="password"
-                name="password"
-                placeholder="Password"
-                type="password"
-              />
-            </div>
+          <div className="mb-3">
+            <Field
+              className="form-control"
+              id="password"
+              name="password"
+              placeholder="Password"
+              type="password"
+            />
+          </div>
 
-            <button type="submit" className="btn btn-primary">
-              Login
-            </button>
-          </Form>
-        </Formik>
-      </LoggInnBox>
-    </Container>
+          <button type="submit" className="btn btn-primary">
+            Login
+          </button>
+        </Form>
+      </Formik>
+    </LoggInnBox>
   );
 }

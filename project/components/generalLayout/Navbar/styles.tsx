@@ -2,41 +2,61 @@ import styled from 'styled-components';
 import { ItemWrapper as NavItemWrapper } from '../../helpers/ItemWrapper';
 
 export const NavStyle = styled.nav`
-  color: ${({ theme }) => theme.colors.primary.primaryColor};
-  font-size: ${({ theme }) => theme.typography.h3};
+  a h5 {
+    font-weight: ${({ theme }) => theme.text.weight.regular};
+    font-size: 0.9rem;
+    color: ${({ theme }) => theme.colors.primary.primaryColor};
+    text-shadow: ${({ theme }) => theme.colors.primary.primaryColorTextShadow};
+    margin-top: 0;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary.hoverColor};
+    }
+    &:active {
+      color: ${({ theme }) => theme.colors.primary.activeIconColor};
+    }
+  }
+  h5 {
+    margin-top: 0;
+  }
 `;
 
 export const NavWrapper = styled(NavItemWrapper)`
   display: flex;
   flex-direction: ${(props) =>
-    props.flexDirection ? props.flexDirection : 'column'};
+    props.flexDirection ? props.flexDirection : 'row'};
   align-items: ${(props) =>
     props.alignItems ? props.alignItems : 'flex-start'};
-  padding: 0.5rem;
+  padding: 0;
   cursor: pointer;
-  border: 1px solid ${({ theme }) => theme.colors.secondary.secondaryColor};
 
-  &:hover {
-    border: 1px solid ${({ theme }) => theme.colors.primary.primaryColor};
-    border-radius: 0.25rem;
-  }
   @media (max-width: 850px) {
     display: none;
   }
 `;
 
-export const LogoStyles = styled.img`
-  width: 40vw;
-  border: 1px solid ${({ theme }) => theme.colors.secondary.secondary2};
+export const LogoStyles = styled.image`
+  width: 25vw;
   padding: 0rem 0.25rem;
   cursor: pointer;
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.colors.primary.primary1};
+    border: 1px solid ${({ theme }) => theme.colors.primary.primaryColor};
+    background-color: ${({ theme }) => theme.colors.primary.backgroundColor};
     border-radius: 0.25rem;
   }
 
   &:active {
-    border: 2px solid ${({ theme }) => theme.colors.primary.primary1};
+    border: 4px solid ${({ theme }) => theme.colors.primary.activeLinkColor};
   }
+`;
+
+export const NavbarContainer = styled.div`
+  width: 75vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 `;

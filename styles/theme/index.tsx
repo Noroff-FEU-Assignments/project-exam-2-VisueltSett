@@ -1,10 +1,10 @@
 import colors from './colors';
-import font from './font';
+import text from './text';
 import typography from './typography';
 
 const theme = {
   colors,
-  font,
+  text,
   typography,
 };
 

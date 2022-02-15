@@ -1,4 +1,5 @@
-import { Container, Content, PageContainer } from './styles';
+import { Content, PageContainer } from './styles';
+import { PageWrapper } from '../../helpers/PageWrapper';
 import Header from '../DashboardHeader';
 import Sidebar from '../Sidebar/index';
 import Footer from '../Footer/index';
@@ -16,13 +17,13 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   return (
-    <Container>
+    <PageWrapper>
       <Header isOpened={isOpened} toggleDrawer={toggleDrawer} />
       <Content>
         <Sidebar isOpened={isOpened} />
         <PageContainer>{children}</PageContainer>
       </Content>
       <Footer />
-    </Container>
+    </PageWrapper>
   );
 }

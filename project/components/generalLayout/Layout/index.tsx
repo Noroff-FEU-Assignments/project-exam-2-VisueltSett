@@ -1,28 +1,20 @@
-import { Container, Content, PageContainer } from './styles';
+import { Content, PageContainer } from './styles';
+import { PageWrapper } from '../../helpers/PageWrapper';
 import Navbar from '../Navbar';
-import Sidebar from '../../adminDashboard/Sidebar/index';
 import Footer from '../Footer/index';
-import { useState } from 'react';
 
 type LayoutProps = {
   children: React.ReactNode;
 };
 
 export default function Layout({ children }: LayoutProps) {
-  const [isOpened, setOpened] = useState(false);
-
-  const toggleDrawer = () => {
-    setOpened((prev) => !prev);
-  };
-
   return (
-    <Container>
+    <PageWrapper>
       <Navbar />
       <Content>
-        <Sidebar isOpened={isOpened} />
         <PageContainer>{children}</PageContainer>
       </Content>
       <Footer />
-    </Container>
+    </PageWrapper>
   );
 }
