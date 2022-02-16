@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const PageWrapper = styled.main`
   ${({ theme }) => theme.typography};
   display: flex;
@@ -12,4 +13,5 @@ export const PageWrapper = styled.main`
   color: ${({ theme }) => theme.colors.secondary.secondaryCOlor};
   margin: 0;
   padding: 0;
+  background-image: url('../../../images/osebro-white-wooden-background.jpg');
 `;

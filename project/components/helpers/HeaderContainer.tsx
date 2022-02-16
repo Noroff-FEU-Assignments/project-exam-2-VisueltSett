@@ -11,8 +11,9 @@ export const HeaderContainer = styled.header`
     #55669c 18%,
     #2a3370 40%
   );
-  height: 120px;
-  min-width: 100%;
+  height: 15vh;
+  width: 100%;
+  padding: 0.25rem 1.25rem;
   align-items: flex-start;
   justify-content: space-evenly;
   color: ${({ theme }) => theme.colors.primary.primaryColor};

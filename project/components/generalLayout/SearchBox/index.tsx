@@ -1,19 +1,26 @@
-/*import {
-  Searchbox,
-  SearchIconWrapper,
+import {
+  SearchBoxBackgroundDesktop,
+  SearchBoxBackgroundMobile,
+  SearchBoxInput,
 } from './styles';
 
-import { ItemWrapper } from '../../helpers/ItemWrapper';
-
+import { IconContainer } from '../../helpers/IconContainer';
 
 import { Search } from '@styled-icons/material-outlined';
 
-
- 
-        <Select>
-          <option value="All">All</option>
-        </Select>
-        <Searchbox />
-        <SearchIconWrapper>
-          <SearchOutlined />
-        </SearchIconWrapper> */
+export default function BookSearch() {
+  return (
+    <>
+      <SearchBoxBackgroundMobile>
+        <IconContainer>
+          <Search />
+        </IconContainer>
+      </SearchBoxBackgroundMobile>
+      <SearchBoxBackgroundDesktop>
+        <IconContainer>
+          <Search />
+        </IconContainer>
+      </SearchBoxBackgroundDesktop>
+    </>
+  );
+}

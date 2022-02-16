@@ -1,7 +1,7 @@
 const colors = {
   primary: {
-    primaryColor: 'rgba(252, 252, 252, 1)',
-    primaryColorWhite: 'rgba(255, 255, 255, 1)',
+    primaryColor: 'rgba(242, 242, 242, 1)',
+    primaryColorWhite: 'rgba(255, 255, 255, .75)',
     primaryColorTextShadow: '2px 2px 2px rgba(42, 51, 112, 1)',
     headerBodyTextColor: 'rgb(42, 51, 112)',
     linkColor: 'rgba(42, 51,112,1)',
@@ -9,7 +9,8 @@ const colors = {
     hoverColor: 'rgba(171, 237, 253, 1)',
     iconColor: 'rgba(130, 255, 151, 1)',
     activeIconColor: 'rgba(252, 252, 252, 1)',
-    backgroundColor: 'rgba(252, 252, 252, .8)',
+    backgroundColor: 'rgba(252, 252, 252, .85)',
+    searchBoxBackgroundColor: 'rgba(42, 51, 112, .85)',
     boxShadowColor: '-2px -2px rgba(42, 51, 112, .45)',
   },
   secondary: {

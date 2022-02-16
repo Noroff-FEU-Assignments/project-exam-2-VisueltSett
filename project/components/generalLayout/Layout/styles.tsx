@@ -8,6 +8,6 @@ export const Content = styled.div`
 
 export const PageContainer = styled.div`
   ${({ theme }) => theme.typography};
-  width: 80vw;
+  width: 100vw;
   margin: 0 auto;
 `;

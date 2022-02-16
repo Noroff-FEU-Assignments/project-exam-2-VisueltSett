@@ -30,14 +30,15 @@ export const NavWrapper = styled(NavItemWrapper)`
   padding: 0;
   cursor: pointer;
 
-  @media (max-width: 850px) {
-    display: none;
+  @media (max-width: 768px) {
+    flex-direction: ${(props) =>
+      props.flexDirection ? props.flexDirection : 'column'};
   }
 `;
 
 export const LogoStyles = styled.image`
-  width: 25vw;
-  padding: 0rem 0.25rem;
+  min-width: 25vw;
+  margin: 0;
   cursor: pointer;
 
   &:hover {
@@ -49,14 +50,37 @@ export const LogoStyles = styled.image`
   &:active {
     border: 4px solid ${({ theme }) => theme.colors.primary.activeLinkColor};
   }
+
+  @media (max-width: 490px) {
+    min-width: 180px;
+  }
 `;
 
 export const NavbarContainer = styled.div`
-  width: 75vw;
+  width: 65vw;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 490px) {
+    flex-flow: row wrap;
+  }
+`;
+
+export const MenuContainer = styled.div`
+  width: 65vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+`;
+
+export const NavbarMenuWrapper = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
 `;

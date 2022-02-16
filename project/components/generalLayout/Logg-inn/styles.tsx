@@ -7,20 +7,20 @@ export const LoggInnBox = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
-  height: 40vh;
-  max-width: 450px;
+  height: 30vh;
+  max-width: 400px;
   min-width: 200px;
   border: 1px solid ${({ theme }) => theme.colors.secondary.secondaryColor};
   box-shadow: ${({ theme }) => theme.colors.primary.boxShadowColor};
   border-radius: 0.25rem;
   background-color: ${({ theme }) => theme.colors.primary.primaryColorWhite};
-  margin: 1rem auto;
+  margin: 3rem auto;
 
   input {
     padding: 8px;
     margin: 0 auto 1rem;
     border-radius: 0.25rem;
     width: 90%;
-    max-width: 400px;
+    max-width: 350px;
   }
 `;
