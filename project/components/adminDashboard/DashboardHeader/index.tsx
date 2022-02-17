@@ -4,12 +4,15 @@ import { TitleContainer } from './styles';
 
 import { Menu, ChevronLeft } from '@styled-icons/material-outlined';
 
-type HeaderProps = {
+type DashboardHeaderProps = {
   isOpened: boolean;
   toggleDrawer: () => void;
 };
 
-export default function Header({ isOpened, toggleDrawer }: HeaderProps) {
+export default function DashboardHeader({
+  isOpened,
+  toggleDrawer,
+}: DashboardHeaderProps) {
   return (
     <HeaderContainer>
       <IconContainer onClick={toggleDrawer}>

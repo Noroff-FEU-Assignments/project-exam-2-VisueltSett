@@ -1,7 +1,7 @@
 const colors = {
   primary: {
     primaryColor: 'rgba(242, 242, 242, 1)',
-    primaryColorWhite: 'rgba(255, 255, 255, .75)',
+    primaryColorWhite: 'rgba(255, 255, 255, .55)',
     primaryColorTextShadow: '2px 2px 2px rgba(42, 51, 112, 1)',
     headerBodyTextColor: 'rgb(42, 51, 112)',
     linkColor: 'rgba(42, 51,112,1)',

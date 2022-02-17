@@ -1,13 +1,13 @@
 import type { NextPage } from 'next';
 import Head from '../project/components/Head';
-import LoginForm from '../project/components/generalLayout/Logg-inn';
+import DashboardLayout from '../project/components/adminDashboard/DashboardLayout';
 
-const AdminLoggInn: NextPage = () => {
+const AdminDashboard: NextPage = () => {
   return (
     <>
-      <Head title="Logg inn - Administrator" />
-      <LoginForm />
+      <Head title="Administrator Dashboard" />
+      <DashboardLayout>{}</DashboardLayout>
     </>
   );
 };
-export default AdminLoggInn;
+export default AdminDashboard;

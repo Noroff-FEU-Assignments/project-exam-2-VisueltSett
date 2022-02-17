@@ -1,8 +1,8 @@
-import { HeaderContainer } from '../../helpers/HeaderContainer';
 import {
-  NavbarMenuWrapper,
+  LogoNavbarWrapper,
   MenuContainer,
   NavbarContainer,
+  MainNavContainer,
   NavStyle,
   NavWrapper,
   LogoStyles,
@@ -22,107 +22,115 @@ import NavLink from './NavLink';
 const Navbar: React.FC = () => {
   return (
     <>
-      <HeaderContainer>
-        <Link href="/">
-          <a>
-            <NavWrapper>
-              <LogoStyles>
-                <Image
-                  src={OsebroLogo}
-                  alt="osebro header logo black"
-                  width="240"
-                  height="114"
-                />
-              </LogoStyles>
-            </NavWrapper>
-          </a>
-        </Link>
-        <NavbarMenuWrapper>
+      <MainNavContainer>
+        <LogoNavbarWrapper>
+          <Link href="/">
+            <a>
+              <NavWrapper>
+                <LogoStyles>
+                  <Image
+                    src={OsebroLogo}
+                    alt="osebro header logo black"
+                    width="240"
+                    height="114"
+                  />
+                </LogoStyles>
+              </NavWrapper>
+            </a>
+          </Link>
           <NavbarContainer>
             <NavStyle>
               <NavLink href="/levering" activeClassName="activeLink">
                 <a>
-                  <NavWrapper flexDirection="row" alignItems="flex-start">
-                    <NavWrapper alignItems="baseline">
-                      <IconContainer>
-                        <LocalShipping />
-                      </IconContainer>
+                  <NavWrapper
+                    flexDirection="row"
+                    flexWrap="wrap"
+                    alignItems="baseline"
+                  >
+                    <IconContainer>
+                      <LocalShipping />
+                    </IconContainer>
 
-                      <h5>Levering</h5>
-                    </NavWrapper>
+                    <h5>Levering</h5>
                   </NavWrapper>
                 </a>
               </NavLink>
             </NavStyle>
             <NavStyle>
-              <NavLink href="/kontakt-oss">
+              <NavLink href="/kontakt-oss" activeClassName="activeLink">
                 <a>
-                  <NavWrapper flexDirection="row" alignItems="flex-start">
-                    <NavWrapper alignItems="baseline">
-                      <IconContainer>
-                        <ContactSupport />
-                      </IconContainer>
+                  <NavWrapper
+                    flexDirection="row"
+                    flexWrap="wrap"
+                    alignItems="baseline"
+                  >
+                    <IconContainer>
+                      <ContactSupport />
+                    </IconContainer>
 
-                      <h5>Kontakt</h5>
-                    </NavWrapper>
+                    <h5>Kontakt</h5>
                   </NavWrapper>
                 </a>
               </NavLink>
             </NavStyle>
             <NavStyle>
-              <NavLink href="/kunde-login">
+              <NavLink href="/kunde-login" activeClassName="activeLink">
                 <a>
-                  <NavWrapper flexDirection="row" alignItems="flex-start">
-                    <NavWrapper alignItems="baseline">
-                      <IconContainer>
-                        <PersonOutline />
-                      </IconContainer>
+                  <NavWrapper
+                    flexDirection="row"
+                    flexWrap="wrap"
+                    alignItems="baseline"
+                  >
+                    <IconContainer>
+                      <PersonOutline />
+                    </IconContainer>
 
-                      <h5>Logg inn</h5>
-                    </NavWrapper>
-                  </NavWrapper>
-                </a>
-              </NavLink>
-            </NavStyle>
-            <NavStyle>
-              <NavLink href="/handlekurv">
-                <a>
-                  <NavWrapper flexDirection="row" alignItems="flex-start">
-                    <NavWrapper alignItems="baseline">
-                      <IconContainer>
-                        <ShoppingBasket />
-                      </IconContainer>
-
-                      <h5>Handlekurv</h5>
-                    </NavWrapper>
+                    <h5>Logg inn</h5>
                   </NavWrapper>
                 </a>
               </NavLink>
             </NavStyle>
           </NavbarContainer>
-          <MenuContainer>
-            <NavStyle>
-              <NavLink href="/">
-                <a>
-                  <h5>HJEM</h5>
-                </a>
-              </NavLink>
+        </LogoNavbarWrapper>
+        <MenuContainer>
+          <NavWrapper>
+            <NavLink href="/" activeClassName="activeLink">
+              <a>
+                <h5>HJEM</h5>
+              </a>
+            </NavLink>
 
-              <NavLink href="/bokkatalog">
-                <a>
-                  <h5>BOKKATALOG</h5>
-                </a>
-              </NavLink>
+            <NavLink href="/bokkatalog" activeClassName="activeLink">
+              <a>
+                <h5>BOKKATALOG</h5>
+              </a>
+            </NavLink>
 
-              <NavLink href="/favoritter">
-                <a>
-                  <h5>FAVORITTER</h5>
-                </a>
-              </NavLink>
-            </NavStyle>
-          </MenuContainer>
-        </NavbarMenuWrapper>
-      </HeaderContainer>
+            <NavLink href="/favoritter" activeClassName="activeLink">
+              <a>
+                <h5>FAVORITTER</h5>
+              </a>
+            </NavLink>
+          </NavWrapper>
+          <NavStyle id="handlekurv">
+            <NavLink href="/handlekurv" activeClassName="activeLink">
+              <a>
+                <NavWrapper
+                  flexDirection="column"
+                  flexWrap="wrap"
+                  alignItems="center"
+                >
+                  <IconContainer>
+                    <ShoppingBasket />
+                  </IconContainer>
+
+                  <h5>Handlekurv</h5>
+                </NavWrapper>
+              </a>
+            </NavLink>
+          </NavStyle>
+        </MenuContainer>
+      </MainNavContainer>
     </>
   );
 };

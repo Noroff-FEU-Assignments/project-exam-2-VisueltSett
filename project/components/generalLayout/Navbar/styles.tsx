@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ItemWrapper as NavItemWrapper } from '../../helpers/ItemWrapper';
+import { HeaderContainer as NavHeaderContainer } from '../../helpers/HeaderContainer';
 
 export const NavStyle = styled.nav`
   a h5 {
@@ -8,13 +9,17 @@ export const NavStyle = styled.nav`
     color: ${({ theme }) => theme.colors.primary.primaryColor};
     text-shadow: ${({ theme }) => theme.colors.primary.primaryColorTextShadow};
     margin-top: 0;
+    text-decoration: none;
 
     &:hover {
       color: ${({ theme }) => theme.colors.primary.hoverColor};
     }
     &:active {
-      color: ${({ theme }) => theme.colors.primary.activeIconColor};
+      color: ${({ theme }) => theme.colors.primary.activeLinkColor};
     }
+  }
+  a.activeLink h5 {
+    color: ${({ theme }) => theme.colors.primary.activeLinkColor};
   }
   h5 {
     margin-top: 0;
@@ -23,16 +28,15 @@ export const NavStyle = styled.nav`
 
 export const NavWrapper = styled(NavItemWrapper)`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   flex-direction: ${(props) =>
     props.flexDirection ? props.flexDirection : 'row'};
-  align-items: ${(props) =>
-    props.alignItems ? props.alignItems : 'flex-start'};
-  padding: 0;
+  align-items: ${(props) => (props.alignItems ? props.alignItems : 'baseline')};
+  padding: 0.15rem 0.15rem 0;
   cursor: pointer;
-
-  @media (max-width: 768px) {
-    flex-direction: ${(props) =>
-      props.flexDirection ? props.flexDirection : 'column'};
+  a.activeLink h5 {
+    color: ${({ theme }) => theme.colors.primary.activeLinkColor};
   }
 `;
 
@@ -51,36 +55,83 @@ export const LogoStyles = styled.image`
     border: 4px solid ${({ theme }) => theme.colors.primary.activeLinkColor};
   }
 
-  @media (max-width: 490px) {
-    min-width: 180px;
+  @media (max-width: 768px) {
+    min-width: 80px;
   }
 `;
 
 export const NavbarContainer = styled.div`
-  width: 65vw;
+  height: 80%;
+  width: 70vw;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 
+  a.activeLink {
+    color: ${({ theme }) => theme.colors.primary.activeLinkColor};
+  }
+
   @media (max-width: 490px) {
-    flex-flow: row wrap;
+    a h5 {
+      display: none;
+    }
+    padding: 0 0.5rem 0 0;
   }
 `;
 
 export const MenuContainer = styled.div`
-  width: 65vw;
+  width: 100vw;
+  height: 15%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  position: relative;
+
+  #handlekurv {
+    position: absolute;
+    right: 2rem;
+  }
+
+  a.activeLink {
+    color: ${({ theme }) => theme.colors.primary.activeLinkColor};
+  }
+
+  a h5 {
+    font-weight: ${({ theme }) => theme.text.weight.regular};
+    font-size: 0.9rem;
+    color: ${({ theme }) => theme.colors.primary.primaryColor};
+    text-shadow: ${({ theme }) => theme.colors.primary.primaryColorTextShadow};
+    margin: 0;
+    padding: 0 1rem 0.5rem 1rem;
+    text-decoration: none;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary.hoverColor};
+    }
+    &:active {
+      color: ${({ theme }) => theme.colors.primary.activeLinkColor};
+    }
+  }
+  @media (max-width: 590px) {
+    a h5 {
+      display: none;
+    }
+  }
 `;
 
-export const NavbarMenuWrapper = styled.div`
+export const LogoNavbarWrapper = styled.div`
   display: flex;
+  flex-flow: row nowrap;
+  height: 80%;
+`;
+
+export const MainNavContainer = styled(NavHeaderContainer)`
   flex-flow: column nowrap;
+  height: 16vh;
 `;

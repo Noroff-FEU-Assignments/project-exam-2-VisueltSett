@@ -2,43 +2,58 @@ import styled from 'styled-components';
 
 export const SearchBoxInput = styled.input`
   background-color: ${({ theme }) => theme.colors.primary.backgroundColor};
-  padding: 0.5rem;
-  width: 47%;
+  padding: 0.75rem 1rem;
+  width: 90%;
   border-radius: 0.25rem;
   border: 1px solid ${({ theme }) => theme.colors.secondary.secondaryColor};
   box-shadow: ${({ theme }) => theme.colors.primary.boxShadowColor};
 `;
 
+export const SearchHeaderWrapper = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding-left: 2rem;
+`;
+
 export const SearchBoxBackgroundDesktop = styled.div`
-  width: 60vw;
-  height: 20vh;
+  width: 85vw;
+  max-width: 800px;
+  height: 15vh;
   margin: 0 auto;
   background-color: ${({ theme }) =>
     theme.colors.primary.searchBoxBackgroundColor};
+  background-image: linear-gradient(
+    135deg,
+    rgba(42, 51, 112, 0.75) 5%,
+    rgba(85, 102, 156, 0.75) 17%,
+    rgba(85, 102, 156, 0.75) 18%,
+    rgba(42, 51, 112, 0.75) 40%
+  );
   color: ${({ theme }) => theme.colors.primary.primaryColor};
   text-shadow: ${({ theme }) => theme.colors.primary.primaryColorTextShadow};
   box-shadow: ${({ theme }) => theme.colors.primary.boxShadowColor};
   border-radius: 0.25rem;
-
-  @media (max-width: 850px) {
-    display: visible;
-  }
 `;
 
 export const SearchBoxBackgroundMobile = styled.div`
-  width: 60vw;
-  height: 20vh;
+  width: 85vw;
+  height: 15vh;
   margin: 0 auto;
   background-color: ${({ theme }) =>
     theme.colors.primary.searchBoxBackgroundColor};
+  background-image: linear-gradient(
+    135deg,
+    rgba(42, 51, 112, 0.75) 5%,
+    rgba(85, 102, 156, 0.75) 17%,
+    rgba(85, 102, 156, 0.75) 18%,
+    rgba(42, 51, 112, 0.75) 40%
+  );
   color: ${({ theme }) => theme.colors.primary.primaryColor};
   text-shadow: ${({ theme }) => theme.colors.primary.primaryColorTextShadow};
   box-shadow: ${({ theme }) => theme.colors.primary.boxShadowColor};
   border-radius: 0.25rem;
-
-  @media (max-width: 849px) {
-    display: none;
-  }
 `;
 
 /*export const Select = styled.select`

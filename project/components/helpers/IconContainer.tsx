@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const IconContainer = styled.div`
-  padding: 0 10px;
+  padding: 0 0.25rem 0.25rem;
   cursor: pointer;
 
   & svg {

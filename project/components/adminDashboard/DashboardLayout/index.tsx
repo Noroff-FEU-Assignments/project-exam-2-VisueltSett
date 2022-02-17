@@ -1,6 +1,6 @@
 import { Content, PageContainer } from './styles';
-import { PageWrapper } from '../../helpers/PageWrapper';
-import Header from '../DashboardHeader';
+
+import DashboardHeader from '../DashboardHeader';
 import Sidebar from '../Sidebar/index';
 import Footer from '../Footer/index';
 import { useState } from 'react';
@@ -17,13 +17,13 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   return (
-    <PageWrapper>
-      <Header isOpened={isOpened} toggleDrawer={toggleDrawer} />
+    <>
+      <DashboardHeader isOpened={isOpened} toggleDrawer={toggleDrawer} />
       <Content>
         <Sidebar isOpened={isOpened} />
         <PageContainer>{children}</PageContainer>
       </Content>
       <Footer />
-    </PageWrapper>
+    </>
   );
 }

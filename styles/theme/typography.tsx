@@ -29,6 +29,12 @@ const typography = css`
     &:active {
       color: ${primary.activeLinkColor};
     }
+    .activeLink ${font.heading.h5} {
+      color: ${primary.activeLinkColor};
+    }
+    .activeLink ${font.heading.h3} {
+      color: ${primary.activeLinkColor};
+    }
   }
 
   h1 {
@@ -36,6 +42,8 @@ const typography = css`
     font-size: ${size.heading.mobile.h1}px;
     color: ${secondary.secondaryColor};
     text-shadow: ${secondary.secondaryColorTextShadow};
+    max-width: 90vw;
+    margin: 1.5rem auto;
   }
 
   h2 {
@@ -46,6 +54,7 @@ const typography = css`
   }
   h3 {
     font-size: ${size.heading.mobile.h3}px;
+    font-weight: ${weight.regular};
     color: ${primary.primaryColor};
     text-shadow: ${primary.primaryColorTextShadow};
   }
