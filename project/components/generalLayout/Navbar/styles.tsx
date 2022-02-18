@@ -123,6 +123,11 @@ export const MenuContainer = styled.div`
       display: none;
     }
   }
+  @media (min-width: 850px) {
+    a h5 {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const LogoNavbarWrapper = styled.div`

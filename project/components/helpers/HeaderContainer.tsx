@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   background-image: linear-gradient(
     135deg,
     #2a3370 5%,
-    #55669c 17%,
+    #55669c 14%,
     #55669c 18%,
     #2a3370 40%
   );

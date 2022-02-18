@@ -15,6 +15,10 @@ export const SearchHeaderWrapper = styled.div`
   justify-content: flex-start;
   align-items: baseline;
   padding-left: 2rem;
+
+  @media (max-width: 590px) {
+    padding-left: 1rem;
+  }
 `;
 
 export const SearchBoxBackgroundDesktop = styled.div`
@@ -26,29 +30,33 @@ export const SearchBoxBackgroundDesktop = styled.div`
     theme.colors.primary.searchBoxBackgroundColor};
   background-image: linear-gradient(
     135deg,
-    rgba(42, 51, 112, 0.75) 5%,
-    rgba(85, 102, 156, 0.75) 17%,
-    rgba(85, 102, 156, 0.75) 18%,
-    rgba(42, 51, 112, 0.75) 40%
+    rgba(42, 51, 112, 0.6) 5%,
+    rgba(85, 102, 156, 0.6) 17%,
+    rgba(85, 102, 156, 0.6) 18%,
+    rgba(42, 51, 112, 0.6) 40%
   );
   color: ${({ theme }) => theme.colors.primary.primaryColor};
   text-shadow: ${({ theme }) => theme.colors.primary.primaryColorTextShadow};
   box-shadow: ${({ theme }) => theme.colors.primary.boxShadowColor};
   border-radius: 0.25rem;
+
+  @media (min-width: 1000px) {
+    height: 18vh;
+  }
 `;
 
 export const SearchBoxBackgroundMobile = styled.div`
-  width: 85vw;
+  width: 90vw;
   height: 15vh;
   margin: 0 auto;
   background-color: ${({ theme }) =>
     theme.colors.primary.searchBoxBackgroundColor};
   background-image: linear-gradient(
     135deg,
-    rgba(42, 51, 112, 0.75) 5%,
-    rgba(85, 102, 156, 0.75) 17%,
-    rgba(85, 102, 156, 0.75) 18%,
-    rgba(42, 51, 112, 0.75) 40%
+    rgba(42, 51, 112, 0.6) 5%,
+    rgba(85, 102, 156, 0.6) 17%,
+    rgba(85, 102, 156, 0.6) 18%,
+    rgba(42, 51, 112, 0.6) 40%
   );
   color: ${({ theme }) => theme.colors.primary.primaryColor};
   text-shadow: ${({ theme }) => theme.colors.primary.primaryColorTextShadow};

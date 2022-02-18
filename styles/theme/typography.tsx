@@ -76,6 +76,34 @@ const typography = css`
     color: ${secondary.secondaryColor};
     text-transform: uppercase;
   }
+
+  @media (min-width: 850px) {
+    font-size: ${size.body.desktop.regular}px;
+    p,
+    input {
+      font-size: ${size.body.desktop.regular}px;
+    }
+
+    h1 {
+      font-size: ${size.heading.desktop.h1}px;
+    }
+
+    h2 {
+      font-size: ${size.heading.desktop.h2}px;
+    }
+    h3 {
+      font-size: ${size.heading.desktop.h3}px;
+    }
+    h4 {
+      font-size: ${size.heading.desktop.h4}px;
+    }
+    h5 {
+      font-size: ${size.heading.desktop.h5}px;
+    }
+    h6 {
+      font-size: ${size.heading.desktop.h6}px;
+    }
+  }
 `;
 
 export default typography;
