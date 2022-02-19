@@ -1,10 +1,10 @@
 import { Product } from '../common/utils/wooCommerceTypes';
 import ProductCard from '../project/components/generalLayout/ProductCard';
 import Head from '../project/components/Head';
-import Image from 'next/image';
 import { GetStaticProps } from 'next';
 import { fetchWooCommerceProducts } from '../common/utils/WooCommerceApi';
-import { PageWrapper } from '../project/components/helpers/PageWrapper';
+import { ItemWrapper } from '../project/components/helpers/ItemWrapper';
+import NoThumbnailImg from '../public/images/thumbnail-no-image_600w-800h.jpg';
 
 interface BokkatalogProps {
   products: Product[];
@@ -18,12 +18,12 @@ export default function Bokkatalog(props: BokkatalogProps) {
   return (
     <>
       <Head title="Bokkatalog - Alle bøker" />
-      <PageWrapper>
-        <h1>Bokkatalog - Alle våre bøker</h1>
+      <h1>Bokkatalog - Alle våre bøker</h1>
+      <ItemWrapper className="bokkatalog-results-container">
         {products.map((product) => {
           return <ProductCard product={product} key={product.id} />;
         })}
-      </PageWrapper>
+      </ItemWrapper>
     </>
   );
 }

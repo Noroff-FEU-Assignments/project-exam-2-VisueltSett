@@ -57,7 +57,7 @@ export interface Product {
   purchase_note: string;
   categories: Partial<Category>[];
   tags: any[]; // TODO look at Tags properties
-  images: Image[];
+  images: Images[];
   attributes: Attribute[];
   default_attributes: any[]; // TODO look at default attributes properties
   variations: number[];
@@ -74,7 +74,7 @@ export interface Category {
   parent: number;
   description: string;
   display: string;
-  image: Image;
+  image: Images[];
   menu_order: number;
   count: number;
   _links: Links;
@@ -152,16 +152,18 @@ interface Cart {
 // 	options: string[];
 // }
 
-export interface Image {
+export interface Images {
   id: number;
   date_created: Date;
   date_created_gmt: Date;
   date_modified: Date;
   date_modified_gmt: Date;
-  src: string;
+  src?: string;
   name: string;
   alt: string;
   position: number;
+  height: string;
+  width: string;
 }
 
 export interface Attribute {
@@ -313,7 +315,7 @@ export interface Variation {
   dimensions: Dimensions;
   shipping_class: string;
   shipping_class_id: number;
-  image: Image;
+  image: Images[];
   attributes: Attribute[];
   menu_order: number;
   meta_data: MetaData[];

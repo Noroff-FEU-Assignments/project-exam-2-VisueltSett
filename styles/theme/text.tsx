@@ -21,12 +21,12 @@ const text = {
         h6: 16,
       },
       desktop: {
-        h1: 26,
-        h2: 24,
-        h3: 22,
-        h4: 20,
-        h5: 20,
-        h6: 18,
+        h1: 24,
+        h2: 22,
+        h3: 20,
+        h4: 18,
+        h5: 16,
+        h6: 16,
       },
     },
     body: {
@@ -34,7 +34,7 @@ const text = {
         regular: 16,
       },
       desktop: {
-        regular: 18,
+        regular: 16,
       },
     },
   },

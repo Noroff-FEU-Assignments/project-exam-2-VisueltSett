@@ -26,8 +26,23 @@ html,
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden
+  
 }
+
+
+.bokkatalog-results-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  width: 100vw;
+  padding: 0 2rem ;
+  background-color: rgba(242,242,242, 0.8);
+}
+
+
 
 
 `;

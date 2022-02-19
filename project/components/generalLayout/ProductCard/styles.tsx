@@ -1,24 +1,26 @@
 import styled from 'styled-components';
 
-
 export const Card = styled.div`
-  width: 100%;
-`;
-
-export const ImageContainer = styled.div`
-  position: relative;
-  width: 100%;
-  /* height: 100%; */
-  padding-bottom: 100%; /* forces square aspect ratio */
-`;
-
-export const Details = styled.div`
-  width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 5%;
-  padding-bottom: 7%;
   display: flex;
+  flex-flow: column wrap;
   justify-content: center;
-  gap: 12px;
+  align-items: center;
+  width: 85vh;
+  max-width: 200px;
+  height: 40vh;
+  min-height: 340px;
+  margin: 0.5rem 0.25rem 0.5rem 0.25rem;
+  padding: 1rem;
+  border: 1px solid ${({ theme }) => theme.colors.secondary.secondaryColor};
+  box-shadow: ${({ theme }) => theme.colors.secondary.boxShadowColor};
+  border-radius: 0.25rem;
 `;
+
+/* <Image
+          src={product.images[0].src}
+          alt={product.name}
+          layout="fill"
+          height="200"
+          width="150"
+        />
+`;*/

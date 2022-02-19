@@ -7,6 +7,7 @@ interface Props {
   flexDirection?: string;
   flexWrap?: string;
   alignItems?: string;
+  justifyContent?: string;
   maxWidth?: string;
   margin?: string;
   position?: string;

@@ -47,7 +47,7 @@ const typography = css`
   }
 
   h2 {
-    font-weight: ${weight.semiBold};
+    font-weight: ${weight.medium};
     font-size: ${size.heading.mobile.h2}px;
     text-decoration: underline;
     color: ${primary.headerBodyTextColor};
@@ -67,7 +67,7 @@ const typography = css`
     font-weight: ${weight.medium};
     font-size: ${size.heading.mobile.h5}px;
     text-decoration: underline;
-    color: ${primary.iconColor};
+    color: ${primary.linkColor};
     text-shadow: ${secondary.secondaryColorTextShadow};
   }
   h6 {
