@@ -120,7 +120,7 @@ export const MenuContainer = styled.div`
   }
   @media (max-width: 590px) {
     a h5 {
-      font-size: 0.8rem;
+      display: none;
     }
   }
   @media (min-width: 850px) {
