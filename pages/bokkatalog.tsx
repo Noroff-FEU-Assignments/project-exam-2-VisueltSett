@@ -1,10 +1,10 @@
-import { Product } from '../../common/utils/wooCommerceTypes';
-import ProductCard from '../../project/components/generalLayout/ProductCard';
-import Head from '../../project/components/Head';
+import { Product } from '../common/utils/wooCommerceTypes';
+import ProductCard from '../project/components/generalLayout/ProductCard';
+import Head from '../project/components/Head';
 import { GetStaticProps } from 'next';
-import { fetchWooCommerceProducts } from './WooCommerceApi';
-import { ItemWrapper } from '../../project/components/helpers/ItemWrapper';
-import NoThumbnailImg from '../public/images/thumbnail-no-image_600w-800h.jpg';
+import { fetchWooCommerceProducts } from '../common/WooCommerceApi';
+import { ItemWrapper } from '../project/components/helpers/ItemWrapper';
+//import NoThumbnailImg from '../public/images/thumbnail-no-image_600w-800h.jpg';
 
 interface BokkatalogProps {
   products: Product[];
